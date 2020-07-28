@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>NotAnExpert206</title>
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<script src="https://www.gstatic.com/charts/loader.js"></script>
+	<script>
+ 	 google.charts.load('current', {packages: ['corechart']});
+ 	 google.charts.setOnLoadCallback(drawChart);
+	</script>
+</head>
+<body>
+	<script>
+	document.write("first test");
+
+	function loadFile(filePath) {
+ 		var result = null;
+  		var xmlhttp = new XMLHttpRequest();
+  		xmlhttp.open("GET", filePath, false);
+  		xmlhttp.send();
+  			if (xmlhttp.status==200) {
+    		result = xmlhttp.responseText;
+  			}
+  		return result;
+	}	
+	document.write("finished loading function");
+	var mystuff = loadFile("data.txt");
+	document.write("finished loading file");
+	document.write(mystuff);
+	document.write("test");
+</script>
+</body>
+</html>
